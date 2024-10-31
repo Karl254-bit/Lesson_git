@@ -1,0 +1,181 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #101010;
+    color: #f1f1f1;
+}
+
+/* Хедер */
+.site-header {
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #32cd32; /* Зелёная полоса для акцента */
+}
+
+.site-header .logo {
+    font-size: 1.5em;
+    color: #32cd32; /* Зелёный цвет логотипа */
+    font-weight: bold;
+}
+
+.site-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.site-header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.site-header nav ul li a:hover {
+    color: #32cd32; /* Зелёный цвет при наведении */
+}
+
+/* Шапка контента */
+.header {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 3px solid #32cd32; /* Зелёная полоса */
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.subheading {
+    font-size: 1.2em;
+    color: #b3b3b3;
+    margin-top: 10px;
+}
+
+/* Кнопки сортировки */
+.sort-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.sort-buttons button {
+    background-color: #32cd32;
+    color: #000000;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sort-buttons button:hover {
+    animation: buttonHover 0.6s ease-in-out;
+    background-color: #28a828;
+    transform: scale(1.05);
+}
+
+/* Основной контент */
+.main-content {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.news-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+/* Блок новостей */
+.news-item {
+    background-color: #202020;
+    border-left: 8px solid #32cd32;
+    padding: 20px;
+    border-radius: 8px;
+    color: #f1f1f1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-in-out forwards;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    background-color: #282828;
+}
+
+.news-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-bottom: 10px;
+}
+
+.news-summary {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+/* Футер */
+.site-footer {
+    background-color: #000000;
+    color: #808080;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 3px solid #32cd32;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
